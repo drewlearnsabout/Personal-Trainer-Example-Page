@@ -1,0 +1,95 @@
+body {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    background: url(background.png);
+    background-size: cover;
+    font-family: lato;
+}
+
+#grid {
+    display: grid;
+    grid-template-areas: 
+        "a a a a d"
+        "b c c c f"
+        "b c c c f"
+        "e e e e e";
+}
+
+header {
+    display: grid;
+    grid-template-columns: 20% 20% 60%;
+    justify-items: center;
+    grid-area: a;
+}
+
+#logo {
+    height: 7em;
+}
+
+header h1 {
+    color: white;
+}
+
+nav {
+    margin-left: -2em;
+    grid-area: b;
+    width: 15%;
+    display: grid;
+    grid-gap: 1em 0;
+}
+nav a {
+    height: 1.5em;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(217deg, rgba(60,109,221,1) 0%, rgba(0,0,0,1) 100%);
+    font-size: 1.7em;
+    padding: 0.2em 1.5em 0 1.5em;
+    transform: skewX(-15deg);
+    box-shadow: 2px 2px 2px rgb(63, 63, 63);
+}
+
+aside {
+    display: grid;
+    padding: 1em;
+    grid-template-rows: 3em 3em 3em;
+    grid-column: d;
+    height: 8.5em;
+
+}
+
+aside img {
+    height: 2.2em;
+    background: rgb(160, 160, 160);
+    border-radius: 2em;
+
+}
+
+#reviews {
+    margin: 0 4em 0 3em;
+    justify-items: center;
+    grid-column: c;
+    display: grid;
+    grid-template-areas:
+        "a b"
+        "c d";
+    grid-gap: 0.5em 0.5em;
+}
+
+#reviews p {
+    color: white;
+    padding: 1em;
+}
+
+footer {
+    color: white;
+    grid-area: e;
+}
+
+@media (max-width: 800px) {
+    section p {
+        color: white;
+        width: 50%;
+    }
+
+}
